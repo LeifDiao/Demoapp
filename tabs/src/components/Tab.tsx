@@ -1,12 +1,12 @@
 import React from "react";
-import { Welcome } from "./sample/Welcome";
+import { MainTab } from "./sample/MainTab";
 
 var showFunction = Boolean(process.env.REACT_APP_FUNC_NAME);
 
 export default function Tab() {
   return (
     <div>
-      <Welcome showFunction={true} />
+      <MainTab showFunction={true} />
     </div>
   );
 }

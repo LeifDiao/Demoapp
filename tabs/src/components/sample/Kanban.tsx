@@ -10,13 +10,6 @@ import { AddIcon } from "@fluentui/react-northstar";
 // TODO: Avoid faker
 
 
-// export function BoardsTab() {
-
-// return<RTProvider  themeName={themeNames.Default} lang="en-US">
-// <Board {...boardContent} boardItemCardLayout={boardItemCardLayout} />
-// </RTProvider>
-// }
-
 export function BoardsTab() {
   return <Board {...boardContent} boardItemCardLayout={boardItemCardLayout} />;
 }
@@ -727,3 +720,9 @@ const boardItemCardLayout: IBoardItemCardLayout = {
   previewPosition: "top",
   overflowPosition: "footer",
 };
+
+
+
+
+
+ 

@@ -1,5 +1,5 @@
 import React from "react";
-import {  Dashboard, EChartTypes } from "@fluentui/react-teams";
+import { Dashboard, EChartTypes } from "@fluentui/react-teams";
 import {
   IWidget,
   EWidgetSize,
@@ -8,29 +8,17 @@ import {
   ExclamationCircleIcon,
   ScreenshareIcon,
   ShareGenericIcon,
-//   Flex,
-//   Text,
+  //   Flex,
+  //   Text,
 } from "@fluentui/react-northstar";
 import { setUncaughtExceptionCaptureCallback } from "process";
-
-
+import "./Dashboardtab.css"
 
 export function DashboardTab() {
-
- return (
-    <div className="welcome page">
-      <div className="narrow page-padding">
-      
-        <h1 className="center">Welcome!</h1>
-        <p className="center">Please explore your OKR Hub in your </p>
-        <Dashboard widgets={defaultWidgets}/>
-        </div>
-      </div>
+  return (
+    <Dashboard widgets={defaultWidgets} />
   )
-      }
-
-
-
+}
 
 const calloutItemsExample = [
   {
@@ -180,7 +168,7 @@ const defaultWidgets: IWidget[] = [
         }
       }
     ]
-  }, 
+  },
   {
     "id": "w5",
     "title": "Pie chart",
@@ -225,55 +213,55 @@ const defaultWidgets: IWidget[] = [
   },
   {
     "id": "w7",
-  "title": "Gradient area chart sample",
-  "size": EWidgetSize.Double,
-  "link": {
-    "href": "#"
-  },
-  "body": [
-    {
-      "id": "1",
-      "title": "",
-      "content": {
-        "type": "chart",
-        "chart": {
-          "title": "Gradient area chart",
-          "type": EChartTypes.LineArea,
-          "data": {
-            "labels": [
-              "Jan",
-              "Feb",
-              "March",
-              "April",
-              "May"
-            ],
-            "datasets": [
-              {
-                "label": "Laptops",
-                "data": [
-                  1860,
-                  7700,
-                  4100,
-                  3012,
-                  2930
-                ]
-              },
-              {
-                "label": "Watches",
-                "data": [
-                  200,
-                  3600,
-                  480,
-                  5049,
-                  4596
-                ]
-              }
-            ]
+    "title": "Gradient area chart sample",
+    "size": EWidgetSize.Double,
+    "link": {
+      "href": "#"
+    },
+    "body": [
+      {
+        "id": "1",
+        "title": "",
+        "content": {
+          "type": "chart",
+          "chart": {
+            "title": "Gradient area chart",
+            "type": EChartTypes.LineArea,
+            "data": {
+              "labels": [
+                "Jan",
+                "Feb",
+                "March",
+                "April",
+                "May"
+              ],
+              "datasets": [
+                {
+                  "label": "Laptops",
+                  "data": [
+                    1860,
+                    7700,
+                    4100,
+                    3012,
+                    2930
+                  ]
+                },
+                {
+                  "label": "Watches",
+                  "data": [
+                    200,
+                    3600,
+                    480,
+                    5049,
+                    4596
+                  ]
+                }
+              ]
+            }
           }
         }
       }
-    }
-  ]
+    ]
 
   },
 ];

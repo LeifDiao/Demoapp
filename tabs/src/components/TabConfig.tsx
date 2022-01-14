@@ -48,5 +48,4 @@ class TabConfig extends React.Component {
     );
   }
 }
-
 export default TabConfig;
