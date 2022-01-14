@@ -4,41 +4,49 @@ import {
   IWidget,
   EWidgetSize,
 } from "@fluentui/react-teams/lib/cjs/components/Dashboard/DashboardWidget";
-// import {
-//   ExclamationCircleIcon,
-//   ScreenshareIcon,
-//   ShareGenericIcon,
+import {
+  ExclamationCircleIcon,
+  ScreenshareIcon,
+  ShareGenericIcon,
 //   Flex,
 //   Text,
-// } from "@fluentui/react-northstar";
-// import { setUncaughtExceptionCaptureCallback } from "process";
+} from "@fluentui/react-northstar";
+import { setUncaughtExceptionCaptureCallback } from "process";
 
-// export function DashboardTab() {
-//   return
-//   //  <RTProvider themeName={themeNames.Default} lang="en-US">
-//     <Dashboard widgets={defaultWidgets} />
-//   // </RTProvider>
-// }
+
 
 export function DashboardTab() {
-  return <Dashboard widgets={defaultWidgets} />;
-}
 
-// const calloutItemsExample = [
-//   {
-//     id: "action_1",
-//     title: "Info",
-//     icon: <ExclamationCircleIcon />,
-//   },
-//   { id: "action_2", title: "Popup", icon: <ScreenshareIcon /> },
-//   {
-//     id: "action_3",
-//     title: "Share",
-//     icon: <ShareGenericIcon />,
-//   },
-// ];
+ return (
+    <div className="welcome page">
+      <div className="narrow page-padding">
+      
+        <h1 className="center">Welcome!</h1>
+        <p className="center">Please explore your OKR Hub in your </p>
+        <Dashboard widgets={defaultWidgets}/>
+        </div>
+      </div>
+  )
+      }
 
-// const linkExample = { href: "#" };
+
+
+
+const calloutItemsExample = [
+  {
+    id: "action_1",
+    title: "Info",
+    icon: <ExclamationCircleIcon />,
+  },
+  { id: "action_2", title: "Popup", icon: <ScreenshareIcon /> },
+  {
+    id: "action_3",
+    title: "Share",
+    icon: <ShareGenericIcon />,
+  },
+];
+
+const linkExample = { href: "#" };
 
 const defaultWidgets: IWidget[] = [
   {
