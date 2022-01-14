@@ -1,17 +1,13 @@
 import { useState } from "react";
 import { Image, Menu } from "@fluentui/react-northstar";
 import "./Welcome.css";
-import { EditCode } from "./EditCode";
-import { AzureFunctions } from "./AzureFunctions";
-import { Graph } from "./Graph";
-import { CurrentUser } from "./CurrentUser";
 import { useTeamsFx } from "./lib/useTeamsFx";
 import { TeamsUserCredential } from "@microsoft/teamsfx";
 import { useData } from "./lib/useData";
-import { Deploy } from "./Deploy";
-import { Publish } from "./Publish";
 import { ListTab } from "./ListTab";
-import { ChartTab } from "./ChartTab";
+import { FormTab } from "./FormTab";
+import { DashboardTab } from "./Dashboardtab";
+import { BoardsTab } from "./Kanban";
 
 export function Welcome(props: { showFunction?: boolean; environment?: string }) {
   const { showFunction, environment } = {
@@ -25,12 +21,12 @@ export function Welcome(props: { showFunction?: boolean; environment?: string })
       azure: "Azure environment",
     }[environment] || "local environment";
 
-  const steps = ["local", "azure", "publish","new"];
+  const steps = ["view1", "list", "formview","kanban"];
   const friendlyStepsName: { [key: string]: string } = {
-    local: "1. Build your app locally",
-    azure: "2. Provision and Deploy to the Cloud",
-    publish: "3. Publish to Teams",
-    new: "4.Add something new",
+    view1: "Dashboard",
+    list: "Objectives",
+    formview: "Summary",
+    kanban: "Kan-ban Board",
   };
   const [selectedMenuItem, setSelectedMenuItem] = useState("local");
   const items = steps.map((step) => {
@@ -50,33 +46,30 @@ export function Welcome(props: { showFunction?: boolean; environment?: string })
   return (
     <div className="welcome page">
       <div className="narrow page-padding">
-      
+{/*       
         <h1 className="center">Welcome{userName ? ", " + userName : ""}!</h1>
-        <p className="center">Please explore your OKR Hub in your {friendlyEnvironmentName}</p>
+        <p className="center">Please explore your OKR Hub in your {friendlyEnvironmentName}</p> */}
         <Menu defaultActiveIndex={0} items={items} underlined secondary />
         <div className="sections">
-          {selectedMenuItem === "local" && (
+          {selectedMenuItem === "view1" && (
             <div>
-              <EditCode showFunction={showFunction} />
-              {isInTeams && <CurrentUser userName={userName} />}
-              <Graph />
-              {showFunction && <AzureFunctions />}
+              <DashboardTab />
             </div>
           )}
-          {selectedMenuItem === "azure" && (
+          {selectedMenuItem === "list" && (
             <div>
-              <Deploy />
+              <ListTab />
             </div>
           )}
-          {selectedMenuItem === "publish" && (
+          {selectedMenuItem === "formview" && (
             <div>
-              <ChartTab />
+              <FormTab />
              
             </div>
           )}
-          {selectedMenuItem === "new" && (
+          {selectedMenuItem === "kanban" && (
             <div>
-              <ListTab />
+              <BoardsTab />
              
             </div>
           )}

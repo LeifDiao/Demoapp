@@ -1,7 +1,5 @@
 import React from "react";
 import {Provider as RTProvider, List,themeNames } from "@fluentui/react-teams";
-
-
 export function ListTab() {
 
     return<RTProvider  themeName={themeNames.Default} lang="en-US">
@@ -32,12 +30,20 @@ const listConfig: any = {
       hideable: true,
       hidePriority: 1,
     },
+    c4: {
+      title: "Rate",
+      hideable: true,
+      hidePriority: 1,
+      minWidth:80,
+    },
+
   },
   rows: {
     r4: {
       c1: "Babak Shammas (no delete)",
       c2: "Seattle, WA",
       c3: "Senior analyst",
+      c4: "High",
       actions: {
         share: { title: "Share", icon: "ShareGeneric" },
         manage: { title: "Edit", icon: "Edit" },
@@ -47,6 +53,7 @@ const listConfig: any = {
       c1: "Aadi Kapoor",
       c2: "Seattle, WA",
       c3: "Security associate",
+      c4: "High",
       actions: {
         share: { title: "Share", icon: "ShareGeneric" },
         manage: { title: "Edit", icon: "Edit" },
@@ -58,7 +65,8 @@ const listConfig: any = {
       c2: "Seattle, WA",
       c3:
         "Security engineer: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in ultricies mi. Sed aliquet odio et magna maximus, et aliquam ipsum faucibus. Sed pulvinar vel nibh eget scelerisque. Vestibulum ornare id felis ut feugiat. Ut vulputate ante non odio condimentum, eget dignissim erat tincidunt. Etiam sodales lobortis viverra. Sed gravida nisi at nisi ornare, non maximus nisi elementum.",
-      actions: {
+        c4: "High",
+        actions: {
         share: { title: "Share", icon: "ShareGeneric" },
         manage: { title: "Edit", icon: "Edit" },
         delete: { title: "Delete", icon: "TrashCan", multi: true },
@@ -68,11 +76,13 @@ const listConfig: any = {
       c1: "Alvin Tao (no actions)",
       c2: "Seattle, WA",
       c3: "Marketing analyst",
+      c4: "High",
     },
     r5: {
       c1: "Beth Davies",
       c2: "Seattle, WA",
       c3: "Senior engineer",
+      c4: "High",
       actions: {
         share: { title: "Share", icon: "ShareGeneric" },
         manage: { title: "Edit", icon: "Edit" },
