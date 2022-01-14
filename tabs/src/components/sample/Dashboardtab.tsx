@@ -1,5 +1,5 @@
 import React from "react";
-import { Provider as RTProvider, themeNames, Dashboard, EChartTypes } from "@fluentui/react-teams";
+import {  Dashboard, EChartTypes } from "@fluentui/react-teams";
 import {
   IWidget,
   EWidgetSize,
@@ -13,12 +13,16 @@ import {
 // } from "@fluentui/react-northstar";
 // import { setUncaughtExceptionCaptureCallback } from "process";
 
-export function DashboardTab() {
-  return <RTProvider themeName={themeNames.Default} lang="en-US">
-    <Dashboard widgets={defaultWidgets} />
-  </RTProvider>
-}
+// export function DashboardTab() {
+//   return
+//   //  <RTProvider themeName={themeNames.Default} lang="en-US">
+//     <Dashboard widgets={defaultWidgets} />
+//   // </RTProvider>
+// }
 
+export function DashboardTab() {
+  return <Dashboard widgets={defaultWidgets} />;
+}
 
 // const calloutItemsExample = [
 //   {
