@@ -10,12 +10,17 @@ import { AddIcon } from "@fluentui/react-northstar";
 // TODO: Avoid faker
 
 
-export function BoardsTab() {
+// export function BoardsTab() {
 
-return<RTProvider  themeName={themeNames.Default} lang="en-US">
-<Board {...boardContent} boardItemCardLayout={boardItemCardLayout} />
-</RTProvider>
+// return<RTProvider  themeName={themeNames.Default} lang="en-US">
+// <Board {...boardContent} boardItemCardLayout={boardItemCardLayout} />
+// </RTProvider>
+// }
+
+export function BoardsTab() {
+  return <Board {...boardContent} boardItemCardLayout={boardItemCardLayout} />;
 }
+
 
 const range = (start: number, end: number): number[] => {
   const out = []

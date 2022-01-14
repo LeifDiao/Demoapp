@@ -17,7 +17,7 @@ import TabConfig from "./TabConfig";
 export default function App() {
   const { theme, loading } = useTeamsFx();
   return (
-    <Provider theme={theme || teamsTheme} styles={{ backgroundColor: "#eeeeee" }}>
+    // <Provider theme={theme || teamsTheme} styles={{ backgroundColor: "#eeeeee" }}>
       <Router>
         <Route exact path="/">
           <Redirect to="/tab" />
@@ -33,7 +33,7 @@ export default function App() {
           </>
         )}
       </Router>
-    </Provider>
+    // </Provider>
     );
   }
     
